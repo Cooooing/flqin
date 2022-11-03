@@ -48,7 +48,7 @@ const config = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: `src/template/${_SEO_ ? 'index-seo.html' : 'index.html'}`,
-      favicon: 'src/assets/favicon.ico'
+      favicon: 'src/assets/favicon.png'
     }),
     new MiniCssExtractPlugin({
       filename: _DEV_ ? 'css/[name].css' : '[name].[contenthash:8].css',
