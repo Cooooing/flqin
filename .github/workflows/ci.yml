@@ -33,4 +33,4 @@ jobs:
           git config --global user.name "Cooooing"
           git add .
           git commit -m "$(date +"%Z %Y-%m-%d %A %H:%M:%S") Updated By Github Actions"
-          git push --force --quiet "https://Cooooing:${{ secrets.GITHUBTOKEN }}@github.com/Cooooing/flqin.git" master:release
+          git push --force --quiet "https://Cooooing:${{ token }}@github.com/Cooooing/flqin.git" master:release
