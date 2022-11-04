@@ -26,6 +26,7 @@ jobs:
         run: yarn build
         
       - name: Deploy
+        uses: actions/checkout@v2
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           REPOSITORY_NAME: Cooooing/flqin
