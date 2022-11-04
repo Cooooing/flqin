@@ -25,10 +25,12 @@ jobs:
       - name: Build
         run: yarn build
         
-      - name: Deploy
-        uses: actions/checkout@v2
-        with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          REPOSITORY_NAME: Cooooing/flqin
-          BRANCH: release
-          FOLDER: dist
+      - name: 部署 #此处master:master 指从本地的master分支提交到远程仓库的master分支，若远程仓库没有对应分支则新建一个。如有其他需要，可以根据自己的需求更改。
+        run: |
+        cd ./dist
+        git init
+        git config --global user.email "2450144961@qq.com"
+        git config --global user.name "Cooooing"
+        git add .
+        git commit -m "$(date +"%Z %Y-%m-%d %A %H:%M:%S") Updated By Github Actions"
+        git push --force --quiet "https://Cooooing:${{ secrets.GITHUBTOKEN }}@github.com/Cooooing/flqin.git" master:release
