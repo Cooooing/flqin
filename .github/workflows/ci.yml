@@ -24,3 +24,10 @@ jobs:
         run: yarn build:seo
       - name: Build
         run: yarn build
+        
+      - name: Deploy
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          REPOSITORY_NAME: Cooooing/flqin
+          BRANCH: release
+          FOLDER: dist
