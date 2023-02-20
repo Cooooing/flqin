@@ -138,7 +138,7 @@ export default {
           img: {
             backgroundImage: `url(${schiphalast})`
           },
-          contentList: ['负责部分游戏后端支持', '负责测试阶段网页账号注册功能的开发', '负责bug提交功能的开发']
+          contentList: ['负责部分游戏后端支持', '负责游戏热更新服务端功能的开发', '负责社交系统的开发']
         }
       ]
     },
@@ -150,7 +150,7 @@ export default {
         },
         {
           title: 'Schiphalast',
-          des: 'tap预约游戏，尚在测试，未正式发布。',
+          des: 'tap游戏，尚在测试阶段。',
           url: 'https://schiphalast.space/'
         }
       ],
